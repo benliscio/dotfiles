@@ -1,0 +1,4 @@
+function replace() {
+  echo "replacing '$1' with '$2' for pattern '$3'"
+  find $3 -print0 | xargs -0 sed -i "" "s/$1/$2/g"
+}

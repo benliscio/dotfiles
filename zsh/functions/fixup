@@ -1,0 +1,5 @@
+function fixup() {
+  echo Fixing up $1
+  git ci . --fixup=$1
+  git rebase -i $1~
+}

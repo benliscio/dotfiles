@@ -1,0 +1,32 @@
+# unix
+alias mkdir="mkdir -p"
+alias ll="ls -la"
+
+# Directory switching
+alias home="   cd ~/"
+alias db="     cd ~/code/daisybill/"
+alias api="    cd ~/code/daisybill_api/"
+alias know="   cd ~/code/knowledgeable/"
+alias ellis="  cd ~/code/ellis/"
+alias mark="   cd ~/code/marketing/"
+alias dot="    cd ~/.dotfiles/"
+
+# Git
+alias g="git"
+alias gl="git pl"
+alias gpr="git pull --rebase"
+alias gcm="git checkout master"
+alias gcp="git checkout -"
+alias grm="git rebase master"
+alias com="git ci . --amend"
+alias gpsu="git rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
+
+# Misc alias
+alias be="bundle exec "
+alias h=heroku
+alias s=github_workflow
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Rails
+alias s="rspec"
+alias specs_since_master="git ll master.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec"
