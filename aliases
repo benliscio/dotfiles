@@ -2,7 +2,7 @@
 alias mkdir="mkdir -p"
 alias ll="ls -la"
 
-# Directory switching
+# Shortcuts
 alias home="   cd ~/"
 alias db="     cd ~/code/daisybill/"
 alias api="    cd ~/code/daisybill_api/"
@@ -10,6 +10,9 @@ alias know="   cd ~/code/knowledgeable/"
 alias ellis="  cd ~/code/ellis/"
 alias mark="   cd ~/code/marketing/"
 alias dot="    cd ~/.dotfiles/"
+alias dl="     cd ~/Downloads"
+alias dt="     cd ~/Desktop"
+
 
 # Git
 alias g="git"
@@ -25,8 +28,38 @@ alias gpsu="git rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
 alias be="bundle exec "
 alias h=heroku
 alias s=github_workflow
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # Rails
 alias s="rspec"
 alias specs_since_master="git ll master.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec"
+
+# === FROM https://github.com/mathiasbynens/dotfiles
+# List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# Open Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec ${SHELL} -l"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# === END https://github.com/mathiasbynens/dotfiles
