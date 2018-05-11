@@ -1,0 +1,50 @@
+if &compatible
+  set nocompatible
+end
+
+" Remove declared plugins
+function! s:UnPlug(plug_name)
+  if has_key(g:plugs, a:plug_name)
+    call remove(g:plugs, a:plug_name)
+  endif
+endfunction
+command!  -nargs=1 UnPlug call s:UnPlug(<args>)
+
+call plug#begin('~/.vim/bundle')
+
+" Define bundles via Github repos
+Plug 'rking/ag.vim'
+Plug 'vim-scripts/camelcasemotion'
+Plug 'wincent/Command-T'
+Plug 'matt-royal/diffthese'
+Plug 'sjl/gundo.vim'
+Plug 'mgamba/j-split'
+Plug 'tmhedberg/matchit'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-abolish'
+Plug 'jgdavey/vim-blockle'
+Plug 'acarapetis/vim-colors-github'
+Plug 'junegunn/vim-easy-align'
+Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown'
+Plug 'Lokaltog/vim-powerline'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
+Plug 'thoughtbot/vim-rspec'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+
+call plug#end()
