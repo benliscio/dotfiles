@@ -91,7 +91,7 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>ls :call RunLastSpec()<CR>
 
 " Easy access to the shell
-map <Leader><Leader> :!
+nnoremap <leader><leader> :RunInInteractiveShell<space>
 
 " AG current word
 map <leader>ag :Ag <cword><CR>
