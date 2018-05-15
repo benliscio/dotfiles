@@ -28,6 +28,7 @@ alias gpsu="git rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
 alias be="bundle exec "
 alias h=heroku
 alias s=github_workflow
+alias deploy=script/pipeline_deploy
 
 # Rails
 alias specs_since_master="git ll master.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec"
