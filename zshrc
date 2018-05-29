@@ -1,6 +1,6 @@
 # Exports
 export ZSH=~/.oh-my-zsh
-export PATH="/Users/benliscio/.rbenv/shims:/usr/local/bin:/Users/benliscio/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/benliscio/.rbenv/bin"
+export PATH="$HOME/.rbenv/shims:$HOME/.pyenv/shims:/usr/local/bin:$HOME/.bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rbenv/bin"
 export PATH="$HOME/.yarn/bin:/usr/local/Cellar/node/8.1.2/bin:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 export BUNDLER_EDITOR=mvim
