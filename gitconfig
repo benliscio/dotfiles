@@ -14,6 +14,7 @@
   pl = log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative
   ll = log --graph --pretty=format:'%Cred%h%Creset %s %Cgreen(%cr)%Creset %an' --abbrev-commit --date=relative --decorate --numstat
   ds = diff --staged
+  r = rebase
   dc = diff --cached
   age = !"for branch in `git branch -r | awk '{print $1}'`; do echo `git log -1 $branch --pretty=format:"%at:%%$branch%%%cr%%%cn%n"`;done | column -t -s'%' | sort -nr | cut -d ':' -f 2"
   fp = push --force-with-lease
