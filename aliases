@@ -13,7 +13,6 @@ alias dot="    cd ~/.dotfiles/"
 alias dl="     cd ~/Downloads"
 alias dt="     cd ~/Desktop"
 
-
 # Git
 alias g="git"
 alias gl="git pl"
@@ -32,6 +31,9 @@ alias deploy=script/pipeline_deploy
 
 # Rails
 alias specs_since_master="git ll master.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec"
+
+# Pretty ping
+alias ping='prettyping --nolegend'
 
 # === FROM https://github.com/mathiasbynens/dotfiles
 # List only directories
