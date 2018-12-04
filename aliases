@@ -15,6 +15,7 @@ alias dl="     cd ~/Downloads"
 alias dt="     cd ~/Desktop"
 
 # Git
+alias g="git"
 alias gl="git pl"
 alias gpr="git pull --rebase"
 alias gcm="git checkout master"

@@ -1,0 +1,4 @@
+function xh() {
+  x12html $1 > $1.html
+  open $1.html
+}
