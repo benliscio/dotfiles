@@ -32,6 +32,8 @@
   ui = auto
 [branch]
   autosetupmerge = true
+  sort=-committerdate # DESC
+  sort=committerdate #ASC
 [fetch]
   prune = true
 [rebase]
