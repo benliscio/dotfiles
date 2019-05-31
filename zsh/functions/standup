@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+function standup() {
+  echo "Adding $1 to ~/Desktop/md_notes/standup.md"
+  DATE=`date "+%Y-%m-%d"`
+  ITEM="- $DATE: $1\n"
+  { echo -n "$ITEM"; cat /Users/benliscio/Desktop/md_notes/standup.md; } > /Users/benliscio/Desktop/md_notes/standup.md.new
+  mv /Users/benliscio/Desktop/md_notes/standup.md{.new,}
+}
