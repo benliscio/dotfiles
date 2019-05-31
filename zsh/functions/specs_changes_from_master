@@ -1,0 +1,3 @@
+function specs_change_from_master() {
+  git ll master.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec
+}
