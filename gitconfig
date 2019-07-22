@@ -60,3 +60,5 @@
   required = true
 [github]
   user = benliscio
+[help]
+  autocorrect = 1
