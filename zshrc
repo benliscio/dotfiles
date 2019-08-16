@@ -1,8 +1,20 @@
 # Exports
 export ZSH=~/.oh-my-zsh
-export PATH="$HOME/.rbenv/shims:$HOME/.pyenv/shims:/usr/local/bin:$HOME/.bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rbenv/bin"
-export PATH="$HOME/.yarn/bin:/usr/local/Cellar/node/8.1.2/bin:$PATH"
+
+export PATH=""
+export PATH="/usr/local/bin/yarn:$PATH"
+export PATH="/usr/local/bin/node:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="bundle binstubs$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+
 export BUNDLER_EDITOR=mvim
 
 # load custom executable functions
