@@ -52,5 +52,6 @@ Plug 'rhysd/vim-crystal'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'wincent/Command-T'
 Plug 'leafgarland/typescript-vim'
+Plug 'thalesmello/lkml.vim'
 
 call plug#end()
