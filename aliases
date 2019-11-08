@@ -15,6 +15,7 @@ alias dl="     cd ~/Downloads"
 alias dt="     cd ~/Desktop"
 alias auth="   cd ~/code/auth-inbox"
 alias wcb="    cd ~/code/wcb_xml_clearinghouse"
+alias looker=" cd ~/code/looker"
 
 # Git
 alias g="git"
