@@ -53,5 +53,6 @@ Plug 'vim-scripts/camelcasemotion'
 Plug 'wincent/Command-T'
 Plug 'leafgarland/typescript-vim'
 Plug 'thalesmello/lkml.vim'
+Plug 'rhysd/vim-grammarous'
 
 call plug#end()
