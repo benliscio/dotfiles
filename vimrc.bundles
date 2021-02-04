@@ -13,7 +13,7 @@ command!  -nargs=1 UnPlug call s:UnPlug(<args>)
 call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
-Plug 'Lokaltog/vim-powerline'
+Plug 'vim-airline/vim-airline'
 Plug 'acarapetis/vim-colors-github'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-run-interactive'
