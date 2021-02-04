@@ -14,6 +14,7 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.pyenv/shims:$PATH"
 export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/Applications/LibreOffice.app/Contents/MacOS/:$PATH"
 
 export BUNDLER_EDITOR=mvim
 
