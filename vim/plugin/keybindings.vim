@@ -86,9 +86,13 @@ cmap <C-A> <C-B>
 map <leader>cp :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 
 " Run tests
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>ls :call RunLastSpec()<CR>
+map <Leader>t  :TestFile<CR>
+map <Leader>s  :TestNearest<CR>
+map <Leader>ls :TestLast<CR>
+
+" Run tests
+map <Leader>tt :call RunCurrentSpecFile()<CR>
+map <Leader>ts :call RunNearestSpec()<CR>
 
 " Easy access to the shell
 nnoremap <leader><leader> :RunInInteractiveShell<space>
