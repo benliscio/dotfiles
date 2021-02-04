@@ -22,9 +22,9 @@ alias notes="  cd ~/code/notes"
 alias g="git"
 alias gl="git pl"
 alias gpr="git pull --rebase"
-alias gcm="git checkout master"
+alias gcm="git checkout main"
 alias gcp="git checkout -"
-alias grm="git rebase master"
+alias grm="git rebase main"
 alias com="git ci . --amend"
 alias gpsu="git rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
 
@@ -37,7 +37,7 @@ alias deploy=bin/deploy
 alias weather="weather --hide-icon"
 
 # Rails
-alias specs_since_master="git ll master.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec"
+alias specs_since_main="git ll main.. | grep spec | grep \.rb | cut -c 8-200 | sed 'N;s/\n/ /' | xargs rspec"
 
 # Pretty ping
 alias ping='prettyping --nolegend'
