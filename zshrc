@@ -2,6 +2,7 @@
 export ZSH=~/.oh-my-zsh
 
 export PATH=""
+export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/bin/yarn:$PATH"
 export PATH="/usr/local/bin/node:$PATH"
 export PATH="/usr/local/bin:$PATH"
