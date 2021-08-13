@@ -137,3 +137,7 @@ nnoremap <Leader>pt oputs "#" *60<C-M>puts "<C-R>=expand("%") . ':' . line(".")<
 
 " Open pull request
 map <leader>o :! github_workflow open<CR>
+
+" Rails i18n translations
+nnoremap <silent> <leader>lt :call localorie#translate()<CR>
+nnoremap <silent> <leader>le :echo localorie#expand_key()<CR>
