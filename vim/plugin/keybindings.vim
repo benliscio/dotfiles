@@ -74,7 +74,7 @@ map <leader>rt :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.includ
 map <leader>rT :!bundle exec rails runner 'puts $LOAD_PATH.select{\|x\| x.include?(Dir.pwd) && x \!~ \%r{/(vendor\|spec)\b} }.join(" ")' \| xargs bundle exec rdoc -f tags; /usr/local/bin/ctags --append -R public/javascripts<CR>
 
 " Git blame
-map <leader>g   :Gblame<CR>
+map <leader>g   :Git blame<CR>
 
 " Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
