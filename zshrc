@@ -12,6 +12,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
 export PATH="/Applications/LibreOffice.app/Contents/MacOS/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 
 export BUNDLER_EDITOR=mvim
 

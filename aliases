@@ -1,6 +1,7 @@
 # unix
 alias mkdir="mkdir -p"
 alias ll="ls -la"
+alias ls=exa
 
 # Shortcuts
 alias home="   cd ~/"
@@ -44,7 +45,7 @@ alias ping='prettyping --nolegend'
 
 # === FROM https://github.com/mathiasbynens/dotfiles
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias lsd="exa -lF ${colorflag} | grep --color=never '^d'"
 
 # Open Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
