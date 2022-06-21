@@ -1,0 +1,5 @@
+# No arguments: `git status`
+# With arguments: acts like `git`
+ip() {
+  curl https://freegeoip.app/json/$@ -s | jq
+}
