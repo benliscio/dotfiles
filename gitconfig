@@ -22,6 +22,7 @@
   psu = "rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
   stash-all = stash save --include-untracked
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+  grab = git stash push && git pull --ff-only -v && git stash pop
 [apply]
   whitespace = nowarn
 [color]
