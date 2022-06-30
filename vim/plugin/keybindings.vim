@@ -134,6 +134,7 @@ inoremap jj <ESC>
 
 " insert puts statements and line number https://twitter.com/Benoit_Tgt/status/1037988875476586496
 nnoremap <Leader>pt oputs "#" *60<C-M>puts "<C-R>=expand("%") . ':' . line(".")<CR>"<C-M>puts "*" * 60<esc>
+nnoremap <Leader>pry obinding.pry<CR><esc>
 
 " Open pull request
 map <leader>o :! github_workflow open<CR>
