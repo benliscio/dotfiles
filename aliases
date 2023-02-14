@@ -32,7 +32,7 @@ alias gpsu="git rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
 # Misc alias
 alias be="bundle exec "
 alias h=heroku
-alias s=github_workflow
+alias s=dbcli
 alias deploy=bin/deploy
 
 alias weather="weather --hide-icon"
