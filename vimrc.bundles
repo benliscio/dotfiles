@@ -15,6 +15,7 @@ call plug#begin('~/.vim/bundle')
 " Define bundles via Github repos
 Plug 'vim-airline/vim-airline'
 Plug 'acarapetis/vim-colors-github'
+Plug 'wojciechkepka/vim-github-dark'
 Plug 'ap/vim-css-color'
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-localorie'
@@ -58,5 +59,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'thalesmello/lkml.vim'
 Plug 'rhysd/vim-grammarous'
+Plug 'github/copilot.vim'
 
 call plug#end()
