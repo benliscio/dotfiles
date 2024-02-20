@@ -39,8 +39,9 @@
   prune = true
 [rebase]
   autosquash = true
+  autostash = true
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 [code]
   editor = subl
 [filter "media"]
@@ -52,14 +53,14 @@
   email = bliscio@daisybill.com
   signingkey = B1D57E9B93C61005
 [push]
-  default = simple
+  default = current
 [credential]
   helper = osxkeychain
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
   required = true
-	process = git-lfs filter-process
+  process = git-lfs filter-process
 [github]
   user = benliscio
 [help]
