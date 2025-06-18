@@ -15,7 +15,7 @@ endfunction
 " If the file ends with _spec.rb, RunTestTool with rspec
 command! RunFocusedTest :call RunFocusedTest()
 function! RunFocusedTest()
-  let spec_command = system('if [ x != "x"$(which spec) ] ; then echo -n spec ; elif [ x != "x"$(which rspec) ] ; then echo -n rspec ; fi')
+  let spec_command = system('if [ x != "x"$(which spec) ] ; then echo -n spec ; elif [ x != "x"$(which rspec) ] ; then echo -n bin/rspec ; fi')
   let filename = expand("%")
   if filename =~ '_spec\.rb$'
     call RunTestTool("be ".spec_command." ".expand("%").":".line("."))
@@ -24,7 +24,7 @@ endfunction
 
 command! RunTests :call RunTests()
 function! RunTests()
-  let spec_command = system('if [ x != "x"$(which spec) ] ; then echo -n spec ; elif [ x != "x"$(which rspec) ] ; then echo -n rspec ; fi')
+  let spec_command = system('if [ x != "x"$(which spec) ] ; then echo -n spec ; elif [ x != "x"$(which rspec) ] ; then echo -n bin/rspec ; fi')
   let filename = expand("%")
   if filename =~ '_spec\.rb$'
     call RunTestTool("be ".spec_command." ".expand("%"))

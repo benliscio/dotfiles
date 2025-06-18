@@ -14,6 +14,9 @@ export PATH="/Applications/LibreOffice.app/Contents/MacOS/:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
+export PGGSSENCMODE=disable
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 export BUNDLER_EDITOR=mvim
 
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
@@ -45,3 +48,4 @@ SAVEHIST=8192
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/benliscio/.sdkman"
 [[ -s "/Users/benliscio/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/benliscio/.sdkman/bin/sdkman-init.sh"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

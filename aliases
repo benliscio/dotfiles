@@ -6,6 +6,10 @@ alias ls=eza
 # Shortcuts
 alias home="   cd ~/"
 alias db="     cd ~/code/daisybill/"
+alias db1="     cd ~/code/daisybill-1/"
+alias db2="     cd ~/code/daisybill-2/"
+alias db3="     cd ~/code/daisybill-3/"
+alias db4="     cd ~/code/daisybill-4/"
 alias api="    cd ~/code/daisybill_api/"
 alias kb="     cd ~/code/knowledgeable/"
 alias ellis="  cd ~/code/ellis/"
@@ -18,6 +22,7 @@ alias auth="   cd ~/code/auth-inbox"
 alias wcb="    cd ~/code/wcb_xml_clearinghouse"
 alias looker=" cd ~/code/looker"
 alias notes="  cd ~/code/notes"
+alias goat="cd ~/code/daisygoat ; heroku pg:psql -f lib/queries/activity_day.sql "
 
 # Git
 alias g="git"
@@ -32,7 +37,10 @@ alias gpsu="git rev-parse --abbrev-ref HEAD | XARGS git push origin -u"
 # Misc alias
 alias be="bundle exec "
 alias h=heroku
-alias s=dbcli
+alias s="dbcli"
+alias gc="s github commit"
+alias rspec="bin/rspec"
+
 alias deploy=bin/deploy
 
 alias weather="weather --hide-icon"
