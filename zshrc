@@ -49,3 +49,24 @@ SAVEHIST=8192
 export SDKMAN_DIR="/Users/benliscio/.sdkman"
 [[ -s "/Users/benliscio/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/benliscio/.sdkman/bin/sdkman-init.sh"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+dbs() {
+  local current_branch=$(git branch --show-current)
+  if [ "$current_branch" != "main" ]; then
+    echo "Aborting: You are not on the main branch."
+    return 1
+  fi
+  local branch_name=$(echo $1 | cut -c1-50)
+  dbcli linear start --no-checkout --branch-name $branch_name
+  git worktree-make $branch_name
+  cd ../$branch_name
+  ln -s ../daisyBill/.claude .claude
+
+  bin/setup -d -s review-app
+  mvim
+}
+
+cpr() {
+  local COMMIT_MESSAGE=$(gh pr view --json title --jq '.title' | sed 's/"/\\"/g' | sed -E 's/^ENG-[0-9]+[[:space:]]*-[[:space:]]*//')
+  dbcli github commit -m "$COMMIT_MESSAGE"
+}

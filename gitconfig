@@ -23,6 +23,8 @@
   stash-all = stash save --include-untracked
   cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
   grab = git stash push && git pull --ff-only -v && git stash pop
+  worktree-dir = "!f() { echo ../$1; }; f"
+  worktree-make = "!f() { : git checkout ; if [ \"$(git rev-parse --git-dir)\" != \".git\" ]; then echo 'Error: Not on the primary worktree'; exit 1; fi; WORKTREE_PATH=$(git worktree-dir $1); if [ ! -d $WORKTREE_PATH ]; then git worktree add $WORKTREE_PATH $1; fi; }; f"
 [apply]
   whitespace = nowarn
 [color]
